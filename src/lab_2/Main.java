@@ -27,7 +27,9 @@ public class Main {
 
         GuitarService.getInstance().createGuitars(10_000, new GuitarSpecification("steel",6, "maple", "Ibanez", "RX507"));
 
+        AcousticGuitar acousticGuitar = new AcousticGuitar();
+        acousticGuitar.setGuitarSpecification(new GuitarSpecification("steel",6, "maple", "Fender", "ST500"));
         ClassicalGuitarsToAcousticAdapter classicalGuitarsToAcousticAdapter = new ClassicalGuitarsToAcousticAdapter(new ClassicalGuitarsServiceImpl());
-        classicalGuitarsToAcousticAdapter.sendToDeposit(new AcousticGuitar());
+        classicalGuitarsToAcousticAdapter.sendToDeposit(acousticGuitar);
     }
 }
