@@ -1,6 +1,6 @@
 package lab_2.domain.models.guitar;
 
-public class AcousticGuitar implements Guitar {
+public class AcousticGuitar extends Guitar {
 
     @Override
     public void play() {
